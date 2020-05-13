@@ -4,43 +4,39 @@
     <meta charset="UTF-8">
     <title>Contact</title>
     <link rel="stylesheet" href="./style.css">
-    <script type="module" src="js/templates.js"></script>
-    <script>
-        const TMPLS = templates;
-        document.addEventListener("DOMContentLoaded", function () {
-            const menu = document.getElementById("mainNavigationMenu");
-            console.log(menu);
-            menu.append(TMPLS.mainMenu)
-        }, false);
-
-    </script>
 </head>
 <body class="bo">
 <!-- HEADER -->
 <header id="myHeader" class="full-width title">
     <nav id="mainNavigationMenu" class="menu">
-        <main-menu></main-menu>
-        <!--        <ul>-->
-        <!--            <li><a href="index.html">Home</a></li>-->
-        <!--            <li><a href="about.html">About</a></li>-->
-        <!--            <li><a href="contact.html">Contact</a></li>-->
-        <!--        </ul>-->
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
     </nav>
 </header>
 
 
 <!-- MAIN -->
-<main>
+<main class="full-width">
     <div class="mondayCreateBoxForMovies">
         <div class="title">Box Title</div>
         <div class="text">
-            <p>;lkdjflaskdhflkajsh lasjkhd flkjash dflkjahs
+            <p>
+                ;lkdjflaskdhflkajsh lasjkhd flkjash dflkjahs
             </p>
         </div>
     </div>
 </main>
 <!-- FOOTER -->
-<footer id="myFooter" class="title-text">
+<footer id="myFooter" class="title-text full-width">
     <p class="text">Footer</p>
 </footer>
 </body>
