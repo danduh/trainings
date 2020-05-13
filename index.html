@@ -2,13 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My title</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="./style.css">
+    <script type="module" src="js/templates.js"></script>
+    <script>
+        const TMPLS = templates;
+        document.addEventListener("DOMContentLoaded", function () {
+            const menu = document.getElementById("mainNavigationMenu");
+            console.log(menu);
+            menu.append(TMPLS.mainMenu)
+        }, false);
+
+    </script>
 </head>
 <body class="bo">
 <!-- HEADER -->
 <header id="myHeader" class="full-width title">
-    <a href="./aboutme.html">About ME</a>
+    <nav id="mainNavigationMenu" class="menu">
+        <main-menu></main-menu>
+        <!--        <ul>-->
+        <!--            <li><a href="index.html">Home</a></li>-->
+        <!--            <li><a href="about.html">About</a></li>-->
+        <!--            <li><a href="contact.html">Contact</a></li>-->
+        <!--        </ul>-->
+    </nav>
 </header>
 
 
