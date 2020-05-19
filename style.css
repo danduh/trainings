@@ -3,10 +3,11 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
+html, body, div, span,
+iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+a, address, code,
+del, em, img, q,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -54,7 +55,6 @@ table {
 }
 
 header {
-    height: 300px;
     background: rgba(0, 0, 255, 0.48);
 }
 
@@ -76,7 +76,7 @@ nav ul li {
 .title {
     color: green;
     font-size: 50px;
-    line-height: 150px;
+    line-height: 100px;
 }
 
 
@@ -101,6 +101,23 @@ div.mondayCreateBoxForMovies .text p {
 
 /** END Box Component **/
 
+main {
+    width: 80vw;
+    margin: 0 auto;
+    background: beige;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
 
 .bo div.text {
     font-weight: bold;

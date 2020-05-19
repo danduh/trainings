@@ -3,23 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
-    <script type="module" src="js/templates.js"></script>
-    <script>
-        const TMPLS = templates;
-        document.addEventListener("DOMContentLoaded", function () {
-            const menu = document.getElementById("mainNavigationMenu");
-            console.log(menu);
-            menu.append(TMPLS.mainMenu)
-        }, false);
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./contact.css">
+    <!--    <script type="module" src="js/templates.js"></script>-->
+    <!--    <script>-->
+    <!--        const TMPLS = templates;-->
+    <!--        document.addEventListener("DOMContentLoaded", function () {-->
+    <!--            const menu = document.getElementById("mainNavigationMenu");-->
+    <!--            console.log(menu);-->
+    <!--            menu.append(TMPLS.mainMenu)-->
+    <!--        }, false);-->
 
-    </script>
+    <!--    </script>-->
 
 </head>
 <body>
-    <header id="myHeader" class="full-width title">
-        <nav id="mainNavigationMenu" class="menu">
-            <main-menu></main-menu>
-        </nav>
-    </header>
+<header id="myHeader" class="full-width title">
+    <nav id="mainNavigationMenu" class="menu">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h1>Contact Us</h1>
+    <form class="contact-form">
+        <div>
+            <label>
+                <span>Your full name:</span>
+                <input required type="text"/>
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Your age:</span>
+                <input required type="number" min="18"/>
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Phone (regex):</span>
+                <input required pattern="[0-9]{3}-[0-9]{7}" type="text"/>
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Subject:</span>
+                <select>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Question:</span>
+                <input required type="text"/>
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Reason:</span>
+                <textarea></textarea>
+            </label>
+        </div>
+        <button type="submit" >Submit</button>
+    </form>
+</main>
+<!--    <header id="myHeader" class="full-width title">-->
+<!--        <nav id="mainNavigationMenu" class="menu">-->
+<!--            <main-menu></main-menu>-->
+<!--        </nav>-->
+<!--    </header>-->
 </body>
 </html>
