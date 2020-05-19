@@ -5,6 +5,53 @@
     <title>Contact</title>
     <link rel="stylesheet" href="./style.css">
     <script src="js/templates.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = [
+                'https://i.picsum.photos/id/11/600/400.jpg',
+                'https://i.picsum.photos/id/22/600/400.jpg',
+                'https://i.picsum.photos/id/33/600/400.jpg',
+                'https://i.picsum.photos/id/44/600/400.jpg',
+                'https://i.picsum.photos/id/55/600/400.jpg',
+            ];
+            let ind = 0;
+
+            const imgLeft = document.getElementById('imgBtnLeft');
+            const imgRight = document.getElementById('imgBtnRight');
+            const img = document.getElementById('imgContainer');
+            img.src = images[ind];
+
+            imgRight.addEventListener('click', () => {
+                if (ind === images.length - 1) {
+                    ind = 0;
+                } else {
+                    ind++;
+                }
+                img.src = images[ind];
+            });
+
+            imgLeft.addEventListener('click', () => {
+                if (ind === 0) {
+                    ind = images.length - 1;
+                } else {
+                    ind--;
+                }
+                img.src = images[ind];
+            })
+
+            // setInterval(() => {
+            //     img.src = images[ind];
+            //     ind++;
+            //     if (ind === images.length) {
+            //         ind = 0;
+            //     }
+            // }, 2000);
+
+
+            console.log(imgLeft, imgRight, img)
+
+        }, false);
+    </script>
 </head>
 <body class="bo">
 <!-- HEADER -->
@@ -37,6 +84,17 @@
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
     </p>
+
+
+    <div class="img-holder">
+        <div class="img-controller left" id="imgBtnLeft">Left</div>
+        <div class="img-center">
+            <img id="imgContainer" src="" alt="description"/>
+        </div>
+        <div class="img-controller right" id="imgBtnRight">Right</div>
+    </div>
+
+
     <div class="mondayCreateBoxForMovies">
         <div class="title">Box Title</div>
         <div class="text">
