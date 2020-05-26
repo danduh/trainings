@@ -16,29 +16,41 @@
             ];
             let ind = 0;
 
-            const imgLeft = document.getElementById('imgBtnLeft');
-            const imgRight = document.getElementById('imgBtnRight');
-            const img = document.getElementById('imgContainer');
-            img.src = images[ind];
+            // const imgLeft = document.getElementById('imgBtnLeft');
+            // const imgRight = document.getElementById('imgBtnRight');
+            // const img = document.getElementById('imgContainer');
+            // img.src = images[ind];
 
-            imgRight.addEventListener('click', () => {
-                if (ind === images.length - 1) {
-                    ind = 0;
-                } else {
-                    ind++;
-                }
-                img.src = images[ind];
-            });
+            const menuCont = document.getElementById('mainNavigationMenu')
+            menuCont.addEventListener('click', () => {
+                const links = document.getElementsByClassName('link')
+                const ln = links.length;
 
-            imgLeft.addEventListener('click', () => {
-                if (ind === 0) {
-                    ind = images.length - 1;
-                } else {
-                    ind--;
+                for (let i = links.length; i > 0; i--) {
+
+                    const link = links[i - 1];
+                    link.className = link.className + ' order' + (ln - i + 1)
                 }
-                img.src = images[ind];
             })
-
+            //
+            // imgRight.addEventListener('click', () => {
+            //     if (ind === images.length - 1) {
+            //         ind = 0;
+            //     } else {
+            //         ind++;
+            //     }
+            //     img.src = images[ind];
+            // });
+            //
+            // imgLeft.addEventListener('click', () => {
+            //     if (ind === 0) {
+            //         ind = images.length - 1;
+            //     } else {
+            //         ind--;
+            //     }
+            //     img.src = images[ind];
+            // })
+            //
             // setInterval(() => {
             //     img.src = images[ind];
             //     ind++;
@@ -48,7 +60,7 @@
             // }, 2000);
 
 
-            console.log(imgLeft, imgRight, img)
+            // console.log(imgLeft, imgRight, img)
 
         }, false);
     </script>
@@ -58,13 +70,13 @@
 <header id="myHeader" class="full-width title">
     <nav id="mainNavigationMenu" class="menu">
         <ul>
-            <li>
+            <li class="link">
                 <a href="index.html">Home</a>
             </li>
-            <li>
+            <li class="link">
                 <a href="about.html">About</a>
             </li>
-            <li>
+            <li class="link">
                 <a href="contact.html">Contact</a>
             </li>
         </ul>
