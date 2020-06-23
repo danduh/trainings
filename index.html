@@ -5,55 +5,21 @@
     <title>Contact</title>
     <link rel="stylesheet" href="./style.css">
     <script src="js/templates.js"></script>
-<!--    <script src="js/main-menu.js"></script>-->
+    <script src="js/photos.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const images = [
-                'https://i.picsum.photos/id/11/600/400.jpg',
-                'https://i.picsum.photos/id/22/600/400.jpg',
-                'https://i.picsum.photos/id/33/600/400.jpg',
-                'https://i.picsum.photos/id/44/600/400.jpg',
-                'https://i.picsum.photos/id/55/600/400.jpg',
+                {photoUrl: 'https://picsum.photos/id/11/337/194.jpg', caption: 'Lorem 1'},
+                {photoUrl: 'https://picsum.photos/id/22/337/194.jpg', caption: 'Lorem 2'},
+                {photoUrl: 'https://picsum.photos/id/33/337/194.jpg', caption: 'Lorem 3'},
+                {photoUrl: 'https://picsum.photos/id/11/337/194.jpg', caption: 'Lorem 1'},
+                {photoUrl: 'https://picsum.photos/id/11/337/194.jpg', caption: 'Lorem 1'},
+                {photoUrl: 'https://picsum.photos/id/11/337/194.jpg', caption: 'Lorem 1'},
+                {photoUrl: 'https://picsum.photos/id/22/337/194.jpg', caption: 'Lorem 2'},
+                {photoUrl: 'https://picsum.photos/id/33/337/194.jpg', caption: 'Lorem 3'}
             ];
-            let ind = 0;
-
-            // const imgLeft = document.getElementById('imgBtnLeft');
-            // const imgRight = document.getElementById('imgBtnRight');
-            // const img = document.getElementById('imgContainer');
-            // img.src = images[ind];
-
-            //
-            // imgRight.addEventListener('click', () => {
-            //     if (ind === images.length - 1) {
-            //         ind = 0;
-            //     } else {
-            //         ind++;
-            //     }
-            //     img.src = images[ind];
-            // });
-            //
-            // imgLeft.addEventListener('click', () => {
-            //     if (ind === 0) {
-            //         ind = images.length - 1;
-            //     } else {
-            //         ind--;
-            //     }
-            //     img.src = images[ind];
-            // })
-            //
-            // setInterval(() => {
-            //     img.src = images[ind];
-            //     ind++;
-            //     if (ind === images.length) {
-            //         ind = 0;
-            //     }
-            // }, 2000);
-
-
-            // console.log(imgLeft, imgRight, img)
-            // menuCont
-
-
+            const photoGrid = document.getElementById('photoGrid');
+            photoGrid.setAttribute('photos-data', JSON.stringify(images))
         }, false);
     </script>
 </head>
@@ -61,40 +27,20 @@
 <!-- HEADER -->
 <header id="myHeader" class="full-width title">
     <nav id="mainNavigationMenu" class="menu">
-        <custom-menu title="New Text"></custom-menu>
-        <custom-menu title="Other Text"></custom-menu>
+        <custom-menu></custom-menu>
     </nav>
 </header>
 <!-- MAIN -->
 <main>
-    <h1>The Best Article ever</h1>
-    <h3>More info about article</h3>
-
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-    </p>
-
-
-    <div class="img-holder">
-        <div class="img-controller left" id="imgBtnLeft">Left</div>
-        <div class="img-center">
-            <img id="imgContainer" src="" alt="description"/>
-        </div>
-        <div class="img-controller right" id="imgBtnRight">Right</div>
-    </div>
-
-
-    <div class="mondayCreateBoxForMovies">
-        <div class="title">Box Title</div>
-        <div class="text">
-            <p>
-                ;lkdjflaskdhflkajsh lasjkhd flkjash dflkjahs
-            </p>
-        </div>
+    <!--    <div class="img-holder">-->
+    <!--        <div class="img-controller left" id="imgBtnLeft">Left</div>-->
+    <!--        <div class="img-center">-->
+    <!--            <img id="imgContainer" src="" alt="description"/>-->
+    <!--        </div>-->
+    <!--        <div class="img-controller right" id="imgBtnRight">Right</div>-->
+    <!--    </div>-->
+    <div class="photos-wrapper">
+        <photo-box id="photoGrid"></photo-box>
     </div>
 </main>
 

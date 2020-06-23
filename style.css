@@ -70,15 +70,19 @@ nav ul li {
     margin-right: 20px;
     background: beige;
 }
-nav ul li.order1{
+
+nav ul li.order1 {
     order: 1;
 }
-nav ul li.order2{
+
+nav ul li.order2 {
     order: 2;
 }
-nav ul li.order3{
+
+nav ul li.order3 {
     order: 3;
 }
+
 .full-width {
     width: 100%;
 }
@@ -92,18 +96,33 @@ nav ul li.order3{
 
 /** Box Component */
 
-div.mondayCreateBoxForMovies {
+.photos-wrapper {
+}
+
+photo-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.photo-card {
+    display: block;
+    margin-right: 50px;
+}
+
+div.photo-card {
     width: 300px;
     height: 200px;
     border: solid 1px;
 }
 
-div.mondayCreateBoxForMovies .title {
+div.photo-card .title {
     color: red;
     font-size: 20px;
 }
 
-div.mondayCreateBoxForMovies .text p {
+div.photo-card .text p {
     color: blue !important;
     font-size: 10px;
     font-weight: normal;
@@ -112,7 +131,7 @@ div.mondayCreateBoxForMovies .text p {
 /** END Box Component **/
 
 main {
-    width: 80vw;
+    width: 1100px;
     margin: 0 auto;
     background: beige;
 }

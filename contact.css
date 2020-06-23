@@ -18,6 +18,10 @@
     justify-content: space-between;
 }
 
+h1, h2, hr, div p, .classname, #rrr{
+
+}
+
 .contact-form div label input,
 .contact-form div label textarea,
 .contact-form div label select {
